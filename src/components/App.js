@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div>
       <p>Enter your name:</p>
-        <input onChange={(e)=>setMsg(e.target.value)}/>
+        <input type="text" name="userName" onChange={(e)=>setMsg(e.target.value)}/>
         <p>{msg}</p>
     </div>
   )
