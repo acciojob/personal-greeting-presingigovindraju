@@ -4,11 +4,18 @@ import './../styles/App.css';
 
 const App = () => {
   const [msg,setMsg] = useState("")
+  function him(e){
+    setMsg(e.target.value)
+  }
   return (
     <div>
-      <p>Enter your name:</p>
-        <input type="text" name="userName" onChange={(e)=>setMsg(e.target.value)}/>
-        <p>{msg}</p>
+        <p>Enter your name:</p>
+        <form>
+             <input type="text"  onChange={him}/>
+        </form>
+        {
+          msg!=""?<p>Hello {msg}!</p>:""
+        }
     </div>
   )
 }
